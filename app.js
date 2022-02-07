@@ -7,6 +7,7 @@ pol.addEventListener('click', function(e) {
     btn.addEventListener('click', function() {
         let word = document.getElementById("word").value;
         let text = document.getElementById('resp');
+        word = word.toLowerCase();
         let bool = polindrome(word);
         let set = new Set(word);
         const first = [...set][0];
@@ -66,7 +67,6 @@ function vowels(word) {
     var count = 0;
     for (let i = 0; i < word.length; i++) {
         let letter = word[i];
-        letter = letter.toLowerCase();
         if (letter.match(/([a,e,i,u,o])/)) {
             count++;
         }
