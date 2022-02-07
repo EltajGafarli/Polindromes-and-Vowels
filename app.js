@@ -65,7 +65,8 @@ vow.addEventListener('click', function(e) {
 function vowels(word) {
     var count = 0;
     for (let i = 0; i < word.length; i++) {
-        let letter = word[i].toLowerCase();
+        let letter = word[i];
+        letter = letter.toLowerCase();
         if (letter.match(/([a,e,i,u,o])/)) {
             count++;
         }
